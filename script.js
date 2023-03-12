@@ -94,7 +94,7 @@ window.addEventListener('load', ()=>{
                     clearInterval(timer);
                     error.classList.add("hide");
                     let timer2 = setInterval(()=>{
-                        if(sec2 < 1){
+                        if(sec2 < 2){
                             sec2++;
                         }
                         else{
@@ -174,7 +174,7 @@ window.addEventListener('load', ()=>{
                     clearInterval(timer);
                     verify.classList.add("hide");
                     let timer2 = setInterval(()=>{
-                        if(sec2 < 1){
+                        if(sec2 < 2){
                             sec2++;
                         }
                         else{
@@ -192,7 +192,23 @@ window.addEventListener('load', ()=>{
 
 function Clear(){
     localStorage.clear();
-    location.reload();
+
+    const logContainer = document.querySelector('#log-container');
+    const verify = document.createElement("div");
+    verify.classList.add("verify");
+    verify.innerHTML= `${verifyIcon} <p>List is being cleared now!</p>`;
+    logContainer.appendChild(verify);
+    let sec = 0;
+    let sec2 = 0;
+    let timer = setInterval(()=>{
+    if(sec < 5){
+        sec++;
+    }
+    else{
+        clearInterval(timer);
+        verify.remove();
+        location.reload();
+    }},100);
 }
 
 // localStorage.setItem("dizi",JSON.stringify(dizi));
