@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <title>To Do List</title>
+</head>
+<body>
+    <div class="container">
+        <!--<button id="refresh">refresh</button>-->
+
+        <div class="hide" id="error">
+            <img src="./error.png" width="20px" alt="error icon">
+            <p>Check your plan?</p>
+        </div>
+        <div class="header">
+            <span id="time">Date</span>
+        </div>
+        <div id="list">
+            <form id="new-task-form">
+                <span></span>
+                <input tabindex="0" type="text" id="new-task-input" placeholder="What is your plan today?">
+                <input type="submit" value="+" id="new-task-submit">
+            </form>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
